@@ -7,10 +7,8 @@ export const DeleteButton = ({ onDelete, itemId, confirmText = "Hapus" }) => {
   const handleClick = () => {
     if (!confirming) {
       setConfirming(true);
-      // Set timeout to reset the state after 3 seconds if no action
       setTimeout(() => setConfirming(false), 3000);
     } else {
-      // Execute the delete function
       if (onDelete) onDelete(itemId);
       setConfirming(false);
     }

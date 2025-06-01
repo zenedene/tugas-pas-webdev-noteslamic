@@ -71,7 +71,7 @@ const Page = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
-      {/* Header with breadcrumb */}
+
       <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200/50 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link 
@@ -90,10 +90,9 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Main content */}
       <div className="max-w-4xl mx-auto p-6 pt-8">
         <div className="bg-white rounded-2xl shadow-xl border border-gray-200/50 overflow-hidden">
-          {/* Header section with gradient */}
+    
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-8 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
@@ -108,15 +107,12 @@ const Page = () => {
               </div>
             </div>
             
-            {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/5 rounded-full"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full"></div>
           </div>
 
-          {/* Meta information */}
           <div className="p-8 border-b border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* ID Card */}
               <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -129,7 +125,6 @@ const Page = () => {
                 </div>
               </div>
 
-              {/* Category Card */}
               <div className={`rounded-xl p-4 border ${getCategoryColor(note.kategori).split(' ').slice(2).join(' ')}`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(note.kategori).split(' ').slice(0, 2).join(' ')} rounded-lg flex items-center justify-center text-white shadow-lg`}>
@@ -142,7 +137,6 @@ const Page = () => {
                 </div>
               </div>
 
-              {/* Date Card */}
               <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white shadow-lg">
@@ -156,14 +150,12 @@ const Page = () => {
               </div>
             </div>
 
-            {/* Time ago indicator */}
             <div className="mt-4 flex items-center gap-2 text-gray-500">
               <Clock size={16} />
               <span className="text-sm">{getTimeAgo(note.tanggal)}</span>
             </div>
           </div>
 
-          {/* Content section */}
           <div className="p-8">
             <div className="mb-6">
               <h2 className="text-xl font-bold text-gray-800 mb-3 flex items-center gap-2">
@@ -186,7 +178,6 @@ const Page = () => {
             </div>
           </div>
 
-          {/* Footer */}
           <div className="bg-gray-50 px-8 py-6 border-t border-gray-100">
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">

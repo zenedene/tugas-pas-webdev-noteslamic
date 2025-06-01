@@ -20,7 +20,7 @@ const AddNoteButton = ({ onAdd }) => {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    // Clear error when user starts typing
+ 
     if (error) setError("");
   };
 
@@ -33,14 +33,13 @@ const AddNoteButton = ({ onAdd }) => {
 
     setIsSubmitting(true);
     
-    // Simulate async operation
     setTimeout(() => {
       onAdd({
         ...form,
         tanggal: new Date(tanggal).toISOString()
       });
 
-      // reset
+     
       setForm({ judul: "", notes: "", tanggal: "", kategori: "" });
       setShowForm(false);
       setError("");
@@ -80,7 +79,7 @@ const AddNoteButton = ({ onAdd }) => {
             transform transition-all duration-300 ease-out
             animate-in zoom-in-95 fade-in duration-300
           ">
-            {/* Header */}
+       
             <div className="flex items-center justify-between p-6 pb-4 border-b border-gray-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
@@ -100,7 +99,6 @@ const AddNoteButton = ({ onAdd }) => {
               </button>
             </div>
 
-            {/* Form Content */}
             <div className="p-6 space-y-5">
               {error && (
                 <div className="
@@ -111,7 +109,6 @@ const AddNoteButton = ({ onAdd }) => {
                 </div>
               )}
 
-              {/* Judul Input */}
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                   <FileText size={16} className="text-gray-500" />
@@ -133,7 +130,6 @@ const AddNoteButton = ({ onAdd }) => {
                 />
               </div>
 
-              {/* Notes Textarea */}
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                   <BookOpen size={16} className="text-gray-500" />
@@ -155,9 +151,8 @@ const AddNoteButton = ({ onAdd }) => {
                 />
               </div>
 
-              {/* Date and Category Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Date Input */}
+    
                 <div className="space-y-2">
                   <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                     <Calendar size={16} className="text-gray-500" />
@@ -177,7 +172,6 @@ const AddNoteButton = ({ onAdd }) => {
                   />
                 </div>
 
-                {/* Category Select */}
                 <div className="space-y-2">
                   <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
                     <Tag size={16} className="text-gray-500" />
@@ -203,7 +197,6 @@ const AddNoteButton = ({ onAdd }) => {
               </div>
             </div>
 
-            {/* Footer */}
             <div className="flex justify-end gap-3 p-6 pt-4 border-t border-gray-100">
               <button 
                 onClick={closeForm}

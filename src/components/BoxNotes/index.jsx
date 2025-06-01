@@ -24,7 +24,7 @@ const NoteBox = ({ note, onDelete, id }) => {
     };
     return colors[category] || colors.default;
   };
-  // Function to format date
+
   const formatDate = (dateString) => {
     const options = {
       year: "numeric",
@@ -43,7 +43,7 @@ const NoteBox = ({ note, onDelete, id }) => {
     >
       <Link href={`/notes/${note.id}`}>
         <div className="cursor-pointer">
-          {/* Header */}
+     
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 leading-tight">
@@ -54,14 +54,13 @@ const NoteBox = ({ note, onDelete, id }) => {
                   {note.kategori}
                 </span>
                 <span className="text-xs text-gray-500 flex items-center">
-                  {/* Icon kalender */}
+                
                   {formatDate(note.tanggal)}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Content Preview */}
           <div className="flex-1">
             <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
               {truncateText(note.notes)}
